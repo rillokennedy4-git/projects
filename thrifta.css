@@ -1,0 +1,260 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(137, 34, 179);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding-top: 80px;
+}
+
+h2 {
+    text-align: center;
+}
+
+header img {
+    width: 5rem;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+body {
+    background-color: #DCDAAA;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.box1 {
+    width: 20rem;
+    height: auto;
+    margin: 4rem;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(137, 34, 179);
+    box-shadow: 0 4px 15px 0 rgba(95, 4, 107, 0.75);
+    border-radius: 10px; /* Add border radius for a card-like appearance */
+}
+
+.img img {
+    width: 20rem; 
+    height: 20rem; /* Maintain aspect ratio */
+}
+
+.conatiners {
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+.quantity-box,
+.color-box {
+    margin-top: 5px;
+}
+
+.quantity-box input {
+    width: 50px; /* Decrease width to make it smaller */
+    padding: 6px; /* Adjust padding for better visual balance */
+    border: 1px solid #ccc; /* Add border for a cleaner look */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    font-size: 14px; /* Adjust font size for better readability */
+    outline: none; /* Remove default outline */
+    text-align: center;
+}
+
+
+.color-box select {
+    width: 70px;
+    margin-bottom: 10px; /* Increase margin bottom for better separation */
+    background-color: #DCDAAA; /* Add a white background for better contrast */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* For older versions of webkit browsers */
+    padding: 5px; /* Adjust padding for consistency */
+    border: 1px solid #ccc; /* Add border for consistency */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    font-size: 12px; /* Adjust font size for better readability */
+    cursor: pointer; 
+    text-align: center;/* Change cursor on hover */
+}
+
+/* Style select arrow */
+.color-box select::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+.back {
+    position: fixed;
+    left: 0;
+    padding: 1rem;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    padding: 1rem;
+}
+
+.order-btn, .exit {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #DCDAAA;
+    cursor: pointer;
+    margin: 5px auto;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.order-btn:hover {
+    background-position: 100% 0;
+}
+
+.order-btn:focus {
+    outline: none;
+}
+
+.exit:hover {
+    background-position: 100% 0;
+}
+
+.exit:focus {
+    outline: none;
+}
+
+
+.btn{
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #DCDAAA;
+    cursor: pointer;
+    margin: 15px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #8e37d7, #6b8dd6);
+    box-shadow: 0 4px 15px 0 rgba(166, 125, 224, 0.75);
+
+}
+
+.btn:hover {
+    background-position: 100% 0;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+.order-summary-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.order-summary {
+    padding: 10px;
+}
+
+.order-summary h4 {
+    margin-top: 0;
+}
+
+.order-summary-container.show {
+    display: block;
+}
+
+
+
+/* Add your existing CSS styles here */
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.discount-select {
+    margin-right: 10px;
+}
+
+.order-summary-container {
+    display: none;
+}
+
+.order-summary-container.show {
+    display: block;
+}
+
+.total-price-container {
+    margin-top: 20px;
+}
+
+.checked-out {
+    background-color: #f0f0f0;
+}
+
+
+/* 				<div class="box1">
+					<div class="img">
+						<img src="2.jpg">
+					</div>
+					<p>stocks 10</p>
+					<h3>BAGGY PANTS</h3>
+					<p>499</p>
+					<div class="quantity-box">
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <div class="color-box">
+                        <select>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                        </select>
+                    </div>
+					<div class="btn">
+						<button onclick='click'class="btn">add to cart</button>
+					</div>
+				</div>*/
+
+            

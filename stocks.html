@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .item p {
+            margin: 0;
+            color: #666;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .exit {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #DCDAAA;
+    cursor: pointer;
+    margin: 5px auto;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stock Manipulation</h2>
+        <a href="rillo_thriftastudio.html"><button class="exit">EXIT</button></a>
+        <div class="item">
+            <h3>CARGO PANTS</h3>
+            <p>Current Stock: <input type="number" id="cargo-stock" value="10"></p>
+            <button onclick="decreaseStock('cargo')">Decrease Stock</button>
+            <button onclick="increaseStock('cargo')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>Y2K PANTS</h3>
+            <p>Current Stock: <input type="number" id="y2k-stock" value="10"></p>
+            <button onclick="decreaseStock('y2k')">Decrease Stock</button>
+            <button onclick="increaseStock('y2k')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>EVISU PANTS</h3>
+            <p>Current Stock: <input type="number" id="evisu-stock" value="10"></p>
+            <button onclick="decreaseStock('evisu')">Decrease Stock</button>
+            <button onclick="increaseStock('evisu')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>AOP SHIRTS</h3>
+            <p>Current Stock: <input type="number" id="aop-stock" value="10"></p>
+            <button onclick="decreaseStock('aop')">Decrease Stock</button>
+            <button onclick="increaseStock('aop')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>EVISU SHIRTS</h3>
+            <p>Current Stock: <input type="number" id="evisu_T-stock" value="10"></p>
+            <button onclick="decreaseStock('evisu_T')">Decrease Stock</button>
+            <button onclick="increaseStock('evisu_T')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>STUSSY SHIRTS</h3>
+            <p>Current Stock: <input type="number" id="stussy-stock" value="10"></p>
+            <button onclick="decreaseStock('stussy')">Decrease Stock</button>
+            <button onclick="increaseStock('stussy')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>BRAVEMAN</h3>
+            <p>Current Stock: <input type="number" id="braveman-stock" value="10"></p>
+            <button onclick="decreaseStock('braveman')">Decrease Stock</button>
+            <button onclick="increaseStock('braveman')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>CK1</h3>
+            <p>Current Stock: <input type="number" id="ck1-stock" value="10"></p>
+            <button onclick="decreaseStock('ck1')">Decrease Stock</button>
+            <button onclick="increaseStock('ck1')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>DIOR</h3>
+            <p>Current Stock: <input type="number" id="dior-stock" value="10"></p>
+            <button onclick="decreaseStock('dior')">Decrease Stock</button>
+            <button onclick="increaseStock('dior')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>FITTED SANDO</h3>
+            <p>Current Stock: <input type="number" id="fitted-stock" value="10"></p>
+            <button onclick="decreaseStock('fitted')">Decrease Stock</button>
+            <button onclick="increaseStock('fitted')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>GYMRATS SANDO</h3>
+            <p>Current Stock: <input type="number" id="gymrats-stock" value="10"></p>
+            <button onclick="decreaseStock('gymrats')">Decrease Stock</button>
+            <button onclick="increaseStock('gymrats')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>GANGSTYLE SANDO</h3>
+            <p>Current Stock: <input type="number" id="gangstyle-stock" value="10"></p>
+            <button onclick="decreaseStock('gangstyle')">Decrease Stock</button>
+            <button onclick="increaseStock('gangstyle')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>FUNCO POP</h3>
+            <p>Current Stock: <input type="number" id="funco_pop-stock" value="10"></p>
+            <button onclick="decreaseStock('funco_pop')">Decrease Stock</button>
+            <button onclick="increaseStock('funco_pop')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>LEGO</h3>
+            <p>Current Stock: <input type="number" id="lego-stock" value="10"></p>
+            <button onclick="decreaseStock('lego')">Decrease Stock</button>
+            <button onclick="increaseStock('lego')">Increase Stock</button>
+        </div>
+        <div class="item">
+            <h3>HOTWHEELS</h3>
+            <p>Current Stock: <input type="number" id="hotwheels-stock" value="10"></p>
+            <button onclick="decreaseStock('hotwheels')">Decrease Stock</button>
+            <button onclick="increaseStock('hotwheels')">Increase Stock</button>
+        </div>
+    </div>
+
+    <script>
+        function decreaseStock(item) {
+            const currentStockElement = document.getElementById(`${item}-stock`);
+            let currentStock = parseInt(currentStockElement.value);
+            if (currentStock > 0) {
+                currentStock--;
+                currentStockElement.value = currentStock;
+            } else {
+                alert('Stock cannot be negative!');
+            }
+        }
+
+        function increaseStock(item) {
+            const currentStockElement = document.getElementById(`${item}-stock`);
+            let currentStock = parseInt(currentStockElement.value);
+            currentStock++;
+            currentStockElement.value = currentStock;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Button</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('xxx.jpg'); /* Replace 'your_image.jpg' with the path to your image */
+        background-size: contain;
+        background-color: rgb(137, 34, 179);
+        background-position: center;
+        background-attachment: fixed; /* This ensures that the background image doesn't move when scrolling */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        height: 100vh; /* Makes sure the body takes up the full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a.button {
+        width: 160px;
+        height: 55px;
+        font-size: 16px;
+        font-weight: 800;
+        color:#DCDAAA;
+        cursor: pointer;
+        margin: 20px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        transition: all .4s ease-in-out;
+        background-image: linear-gradient(to right, #667eea, #764ba2, #8e37d7, #6b8dd6);
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none; /* Remove underline from link */
+    }
+
+    a.button:hover {
+        background-position: 100% 0;
+    }
+
+    a.button:focus {
+        outline: none;
+    }
+
+</style>
+</head>
+<body>
+
+    <a href="rillo_thriftastudio.html" class="button">ENTER</a>
+
+</body>
+</html>
